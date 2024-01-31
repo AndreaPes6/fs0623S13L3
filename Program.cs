@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-internal class Program 
+internal class Program
 {
     static void Main()
     {
@@ -53,7 +53,7 @@ internal class Program
 
                 default:
                     Console.WriteLine("Scelta non valida. Riprova.");
-                    Console.ReadLine(); // Attende l'input dell'utente prima di tornare al menu
+                    Console.ReadLine();
                     break;
             }
         }
@@ -169,7 +169,7 @@ class GestoreConto
         else
         {
             Console.WriteLine("Il conto non è aperto.");
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
     }
 
@@ -178,12 +178,63 @@ class GestoreConto
         if (conto.Aperto)
         {
             conto.VisualizzaBilancio();
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
         else
         {
             Console.WriteLine("Il conto non è aperto.");
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
     }
-}
+} 
+
+
+
+
+
+
+
+
+
+
+//using System;
+
+//class Program
+//{
+//    static void Main()
+//    {
+//        RicercaNome();
+//    }
+
+//    static void RicercaNome()
+//    {
+//        Console.Write("Inserisci la dimensione dell'array: ");
+//        int n = int.Parse(Console.ReadLine());
+
+//        string[] nomi = new string[n];
+//        for (int i = 0; i < n; i++)
+//        {
+//            Console.Write($"Inserisci il nome {i + 1}: ");
+//            nomi[i] = Console.ReadLine();
+//        }
+
+//        Console.Write("Inserisci il nome da cercare: ");
+//        string nomeCercato = Console.ReadLine();
+
+//        bool presente = false;
+//        foreach (string nome in nomi)
+//        {
+//            if (nome.Equals(nomeCercato, StringComparison.OrdinalIgnoreCase))
+//            {
+//                presente = true;
+//                break;
+//            }
+//        }
+
+//        if (presente)
+//            Console.WriteLine($"Il nome '{nomeCercato}' è presente nell'array.");
+//        else
+//            Console.WriteLine($"Il nome '{nomeCercato}' non è presente nell'array.");
+//    }
+//}
+
